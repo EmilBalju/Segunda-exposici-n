@@ -1,0 +1,101 @@
+\documentclass[12pt,spanish]{homework}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+%\usepackage{mathpazo}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{listings}
+\usepackage{enumerate} 
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[spanish,mexico]{babel}
+\inputencoding{latin1}
+
+\title{Variable exponencial}
+\author{Emilio Balan,Amilcar Campos, Elian Carrasco, Citlali Gutiérrez, Héctor Rodríguez}
+\date{8 de noviembre del 2020}
+\institute{Universidad Autónoma de Yucatán \\ Facultad de Matemáticas - UADY}
+\class{Probabilidad 1 (Grupo B)}
+\professor{Lic. Ernesto Guerrero Lara}
+
+\begin{document}
+
+\maketitle
+
+\section*{Función de densidad}
+
+
+\section*{Características de la función de densidad}
+
+
+
+\section*{Calcular la función de distribución}
+
+
+\section*{Calcular la esperanza matemática}
+La esperanza para esta variable uniforme continua es la siguiente:
+$$E(X)= \dfrac{a + b}{2}$$
+\subsubsection*{Demostración}
+Sabemos que la función de densidad se encuentra dado por:
+$$
+f_{X} (x)=\begin{cases}
+{\lambda e^{-\lambda x}} & si \mbox{ $ x  > 0$}\\{0 }& \mbox{ en otro caso}\
+\end{cases}
+$$
+De igual forma sabemos que la esperanza para una variable continua, se calcula mediante:
+$$E(X)= \int \limits_{- \infty}^{\infty} xf_{X}(x)dx$$
+Así que la esperanza nos quedaría de la siguiente forma:
+$$E(X)= \int \limits_{0}^{\infty} x \lambda e^{-\lambda x}dx$$
+Esta integración se resuelve por partes, donde:
+\begin{itemize}
+\item $u = x$
+\item $v = -e^{-\lambda x}$
+\item $du = 1$
+\item $dv = \lambda e^{-\lambda x}$
+\end{itemize}
+Así que la integral nos quedaría de la siguiente manera:
+$$E(X)= x(-e^{-\lambda x})\Big|_0^{\infty} - \int \limits_{0}^{\infty} - e^{- \lambda x} dx = \dfrac{- e^{- \lambda x}}{\lambda} \Big|_0^\infty = \dfrac{1}{\lambda}$$
+
+
+Sea X una variable aleatoria con distribución exp$\lambda$, sabemos que la esperanza cuenta con las siguientes propiedades:\\
+a) $E(X^2) = \dfrac{2}{\lambda ^2}$\\
+b) $E(X^n) = \dfrac{n!}{x^n}$
+\subsection*{Demostración de la propiedad a)}
+La función de densidad se encuentra dado por:
+$$
+f_{X} (x)=\begin{cases}
+{\lambda e^{-\lambda x}} & si \mbox{ $ x  > 0$}\\{0 }& \mbox{ en otro caso}\
+\end{cases}
+$$
+Así como la esperanza para una variable continua, se calcula mediante:
+$$E(X)= \int \limits_{- \infty}^{\infty} xf_{X}(x)dx$$
+Así que la esperanza nos quedaría de la siguiente forma:
+$$E(X^2)= \int \limits_{0}^{\infty} x^2 \lambda e^{-\lambda x} dx$$
+
+$$E(X)= \dfrac{x^3}{3(b-a)}\Big|_a^b = \dfrac{b^3 - a^3}{3(b - a)}= \dfrac{(b -a)(b^2 + ab + a^2)}{3(b - a)} = \dfrac{a^2 + ab + b^2}{3} $$
+Esta integración se resuelve por partes, donde:
+\begin{itemize}
+\item $u = x^2$
+\item $v = \dfrac{-e^{-\lambda x}}{\lambda}$
+\item $du = 2x$
+\item $dv = \lambda e^{-\lambda x}$
+\end{itemize}
+Así que la integral nos quedaría de la siguiente manera:
+$$E(X)= -x^2 e^{-\lambda x}\Big|_0^{\infty} + \int \limits_{0}^{\infty} 2xe^{- \lambda x} dx = \dfrac{-2xe^{- \lambda x}}{\lambda ^2} \Big|_0^\infty = \dfrac{2}{\lambda ^2}$$
+\subsection*{Demostración de la propiedad b)}
+
+
+\section*{Calcular la varianza}
+La varianza se obtiene de la forma ya conocida; es decir, como la varianza de esos mismos valores. Expresada en términos de momentos, la varianza será:
+$$Var(X)=\dfrac{1}{\lambda ^2}$$
+\subsection*{Demostración}
+Por información previa sabemos que:
+$$Var(X) = E(X^2) - E^2(X)$$
+Y por las propiedades de la esperanza, sabemos que esto es igual a:
+$$= \dfrac{2}{\lambda ^2} - \dfrac{1}{\lambda ^2}$$
+$$= \dfrac{1}{\lambda ^2}$$
+
+
+
+\section*{Ejercicios propuestos}
+\end{document}
