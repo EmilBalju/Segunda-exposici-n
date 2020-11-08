@@ -1,0 +1,101 @@
+\documentclass[12pt,spanish]{homework}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+%\usepackage{mathpazo}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{listings}
+\usepackage{enumerate} 
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[spanish,mexico]{babel}
+\inputencoding{latin1}
+
+\title{Variables Uniformes Continua}
+\author{Emilio Balan,Amilcar Campos, Elian Carrasco, Citlali Gutiérrez, Héctor Rodríguez}
+\date{8 de noviembre del 2020}
+\institute{Universidad Autónoma de Yucatán \\ Facultad de Matemáticas - UADY}
+\class{Probabilidad 1 (Grupo B)}
+\professor{Lic. Ernesto Guerrero Lara}
+
+\begin{document}
+
+\maketitle
+
+\section*{Función de densidad}
+
+
+\section*{Características de la función de densidad}
+
+
+
+\section*{Calcular la función de distribución}
+
+
+\section*{Calcular la esperanza matemática}
+La esperanza para esta variable uniforme continua es la siguiente:
+$$E(X)= \dfrac{a + b}{2}$$
+\subsubsection*{Demostración}
+Sabemos que la función de densidad se encuentra dado por:
+$$
+f_{X} (x)=\begin{cases}
+{\dfrac{1}{b - a}} & si \mbox{ $a < x  < b$}\\{0 }& \mbox{ en otro caso}\
+\end{cases}
+$$
+De igual forma sabemos que la esperanza para una variable continua, se calcula mediante:
+$$E(X)= \int \limits_{- \infty}^{\infty} xf_{X}(x)dx$$
+Así que la esperanza nos quedaría de la siguiente forma:
+$$E(X)= \int \limits_{- \infty}^{\infty} \dfrac{x}{b - a} dx$$
+$$E(X)= \dfrac{x^2}{2(b-a)}\Big|_a^b = \dfrac{b^2}{2(b - a)} - \dfrac{a^2}{2(b - a)} = \dfrac{b^2 - a^2}{2(b - a)} = \dfrac{b + a}{2} $$
+
+
+Sea X una variable aleatoria con distribución unif(a,b), sabemos que la esperanza cuenta con las siguientes propiedades:\\
+a) $E(X^2) = \dfrac{a^2 + ab + b^2}{3}$\\
+b) $E(X^n) = \dfrac{b^{n+1} - a^{n+1}}{(n+1)(b -a)}$
+\subsection*{Demostración de la propiedad a)}
+La función de densidad se encuentra dado por:
+$$
+f_{X} (x)=\begin{cases}
+{\dfrac{1}{b - a}} & si \mbox{ $a < x  < b$}\\{0 }& \mbox{ en otro caso}\
+\end{cases}
+$$
+Así como la esperanza para una variable continua, se calcula mediante:
+$$E(X)= \int \limits_{- \infty}^{\infty} xf_{X}(x)dx$$
+Así que la esperanza nos quedaría de la siguiente forma:
+$$E(X^2)= \int \limits_{- \infty}^{\infty} \dfrac{x^2}{b - a} dx$$
+$$E(X)= \dfrac{x^3}{3(b-a)}\Big|_a^b = \dfrac{b^3 - a^3}{3(b - a)}= \dfrac{(b -a)(b^2 + ab + a^2)}{3(b - a)} = \dfrac{a^2 + ab + b^2}{3} $$
+
+
+\subsection*{Demostración de la propiedad b)}
+La función de densidad se encuentra dado por:
+$$
+f_{X} (x)=\begin{cases}
+{\dfrac{1}{b - a}} & si \mbox{ $a < x  < b$}\\{0 }& \mbox{ en otro caso}\
+\end{cases}
+$$
+Así como la esperanza para una variable continua, se calcula mediante:
+$$E(X)= \int \limits_{- \infty}^{\infty} xf_{X}(x)dx$$
+Así que la esperanza nos quedaría de la siguiente forma:
+$$E(X^n)= \int \limits_{- \infty}^{\infty} \dfrac{x^n}{b - a} dx$$
+$$E(X)= \dfrac{x^{n+1}}{(n+1)(b-a)}\Big|_a^b = \dfrac{b^{n+1} + a ^{n+1}}{(n+1)(b + a)}$$
+
+
+\section*{Calcular la varianza}
+La varianza se obtiene de la forma ya conocida; es decir, como la varianza de esos mismos valores. Expresada en términos de momentos, la varianza será:
+$$Var(X)=\dfrac{(b-a)^2}{12}$$
+\subsection*{Demostración}
+Por información previa sabemos que:
+$$Var(X) = E(X^2) - E^2(X)$$
+Y por las propiedades de la esperanza, sabemos que esto es igual a:
+$$= \dfrac{a^2 + ab + b^2}{3} - \dfrac{(a + b)^2}{4}$$
+$$=\dfrac{4a^2 + 4ab + 4b^2 - 3b^2 - 6ab - 3a^2}{12}$$
+$$= \dfrac{a^2 - 2ab + b^2}{12}$$
+$$= \dfrac{(b - a)^2}{12}$$
+
+
+
+\section*{Ejercicios propuestos}
+
+
+
+\end{document}
