@@ -1,0 +1,78 @@
+\documentclass[12pt,spanish]{homework}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+%\usepackage{mathpazo}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{listings}
+\usepackage{enumerate} 
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[spanish,mexico]{babel}
+\inputencoding{latin1}
+
+\title{Variable normal}
+\author{Emilio Balan,Amilcar Campos, Elian Carrasco, Citlali Gutiérrez, Héctor Rodríguez}
+\date{8 de noviembre del 2020}
+\institute{Universidad Autónoma de Yucatán \\ Facultad de Matemáticas - UADY}
+\class{Probabilidad 1 (Grupo B)}
+\professor{Lic. Ernesto Guerrero Lara}
+
+\begin{document}
+
+\maketitle
+
+\section*{Función de densidad}
+
+
+\section*{Características de la función de densidad}
+
+
+
+\section*{Calcular la función de distribución}
+
+
+\section*{Calcular la esperanza matemática}
+La esperanza para esta variable normal es la siguiente:
+$$E(X)= \mu$$
+\subsubsection*{Demostración}
+Sabemos que la función de densidad se encuentra dado por:
+$$
+f_{X} (x)= \dfrac{1}{\sqrt{2\pi \sigma ^2}} e^{\dfrac{-(x - \mu)^2}{2\sigma ^2}}, x\in\mathbb{R}
+$$
+De igual forma sabemos que la esperanza para una variable continua, se calcula mediante:
+$$E(X)= \int \limits_{- \infty}^{\infty} xf_{X}(x)dx$$
+Así que la esperanza nos quedaría de la siguiente forma:
+$$E(X)= \int \limits_{- \infty}^{\infty}  \dfrac{x}{\sqrt{2\pi \sigma ^2}} e^{\dfrac{-(x - \mu)^2}{2\sigma ^2}} dx$$
+Realizamos un cambio de variable tal que $z = \dfrac{x - \mu}{\sigma}$ y observamos que $dx = \sigma dz$, obtenemos:
+$$E(X)= \int \limits_{- \infty}^{\infty}  \dfrac{(\mu + z\sigma)}{\sqrt{2\pi \sigma ^2}} e^{\dfrac{-z^2}{2}} \sigma dz$$
+Y esto a la vez es igual a:
+$$E(X) = \mu \int \limits_{- \infty}^{\infty} \dfrac{e^{\dfrac{-z^2}{2}}}{\sqrt{2 \pi}} dz + \sigma \int \limits_{- \infty}^{\infty} \dfrac{ze^{\dfrac{-z^2}{2}}}{\sqrt{2 \pi}} dz $$
+La primera integral (sin el factor $\mu$) representa el área total bajo la la distribución normal estandarizada donde X tiene una distribución N(0,1) y, por lo tanto, es igual a 1, la segunda integral es igual a cero puesto que el integrando, llamémoslo g(z), tiene la propiedad de que $g(z)=-g(-z)$ y por lo tanto g es una función impar.
+$$\therefore E(X) = \mu$$
+
+
+Sea X una variable aleatoria con distribución N$(\mu,\sigma ^2)$, sabemos que la esperanza cuenta con la siguiente propiedad:\\
+$E(X^2) = \mu ^2 + \sigma ^2$\\
+\subsection*{Demostración }
+Haciendo nuevamente, $z = \dfrac{x - \mu}{\sigma}$, obtenemos:
+$$E(X^2)= \int \limits_{- \infty}^{\infty}  \dfrac{(\mu + z\sigma)^2}{\sqrt{2\pi \sigma ^2}} e^{\dfrac{-z^2}{2}} \sigma dz$$
+Y esto a la vez es igual a:
+$$E(X^2) = \mu^2 \int \limits_{- \infty}^{\infty} \dfrac{e^{\dfrac{-z^2}{2}}}{\sqrt{2 \pi}} dz + \sigma \mu \int \limits_{- \infty}^{\infty} \dfrac{2ze^{\dfrac{-z^2}{2}}}{\sqrt{2 \pi}} dz +  \sigma^2 \int \limits_{- \infty}^{\infty} \dfrac{e^{\dfrac{-z^2}{2}}}{\sqrt{2 \pi}} dz$$
+La primera integral (sin el factor $\mu^2$) representa el área total bajo la la distribución normal estandarizada donde X tiene una distribución N(0,1) y, por lo tanto, es igual a 1, la segunda integral es igual a cero puesto que el integrando, llamémoslo g(z), tiene la propiedad de que $g(z)=-g(-z)$ y por lo tanto g es una función impar y por último el tercero sucede el mismo caso que el primero e igual es 1.
+$$\therefore E(X^2) = \mu^2 + \sigma^2$$
+
+\section*{Calcular la varianza}
+La varianza se obtiene de la forma ya conocida; es decir, como la varianza de esos mismos valores. Expresada en términos de momentos, la varianza será:
+$$Var(X)=\sigma ^2$$
+\subsection*{Demostración}
+Por información previa sabemos que:
+$$Var(X) = E(X^2) - E^2(X)$$
+Y por las propiedades de la esperanza, sabemos que esto es igual a:
+$$=(\mu ^2 + \sigma ^2)- (\mu ^2)$$
+$$= \sigma ^2$$
+
+
+
+\section*{Ejercicios propuestos}
+\end{document}
